@@ -28,8 +28,8 @@ def handle_request(addr, conn, proxy_end):
 	data = proxy_end.recv(BUFFER_SIZE)
 	print(f"Sending recieved data {data} to client")
 	conn.send(data)
-	conn.shutdown(socket.SHUT_RDWR)
-	conn.close()
+	# conn.shutdown(socket.SHUT_RDWR)
+	# conn.close()
 
 def main():
 	extern_host = 'www.google.com'
